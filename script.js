@@ -11,7 +11,7 @@ function createGrids() {
 function changeColorOnHover() {
   let div = document.querySelectorAll(".box");
   div.forEach((box) => {
-    box.addEventListener("click", (e) => {
+    box.addEventListener("mouseenter", (e) => {
       box.classList.add("fill");
     });
   });
