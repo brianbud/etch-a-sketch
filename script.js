@@ -10,7 +10,7 @@ let container = document.querySelector("#container");
 // container.appendChild(div);
 
 function createGrids() {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 256; i++) {
     let div = document.createElement("div");
     div.classList.add("box");
     container.appendChild(div);
