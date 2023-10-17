@@ -1,3 +1,12 @@
+h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
 #container {
   width: 320px;
   border: 2px solid rgb(236, 0, 0);
@@ -8,5 +17,9 @@
 .box {
   height: 20px;
   width: 20px;
-  outline: 1px solid rgb(138, 138, 138);
+  outline: 1px solid rgb(190, 190, 190);
+}
+
+.fill {
+  background-color: black;
 }
