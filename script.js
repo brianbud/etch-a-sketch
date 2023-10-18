@@ -1,5 +1,5 @@
 let container = document.querySelector("#container");
-let size = 16;
+let size = 25;
 container.style.width = `${size}rem`;
 
 function createGrids() {
@@ -10,14 +10,26 @@ function createGrids() {
   }
 }
 
-function changeColorOnHover() {
+function fillBoxOnMousedown() {
+  let isMouseDown = false;
+
+  container.addEventListener("mousedown", () => {
+    isMouseDown = true;
+  });
+
+  container.addEventListener("mouseup", () => {
+    isMouseDown = false;
+  });
+
   let div = document.querySelectorAll(".box");
   div.forEach((box) => {
     box.addEventListener("mouseenter", (e) => {
-      box.classList.add("fill");
+      if (isMouseDown) {
+        box.classList.add("fill");
+      }
     });
   });
 }
 
 createGrids();
-changeColorOnHover();
+fillBoxOnMousedown();
