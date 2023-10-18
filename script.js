@@ -1,4 +1,5 @@
 let container = document.querySelector("#container");
+let btn = document.querySelector("button");
 let size = 25;
 container.style.width = `${size}rem`;
 
@@ -30,6 +31,13 @@ function fillBoxOnMousedown() {
     });
   });
 }
+
+btn.addEventListener("click", () => {
+  let div = document.querySelectorAll(".box");
+  div.forEach((box) => {
+    box.classList.remove("fill");
+  });
+});
 
 createGrids();
 fillBoxOnMousedown();
