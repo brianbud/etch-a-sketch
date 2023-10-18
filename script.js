@@ -1,7 +1,13 @@
 let container = document.querySelector("#container");
 let btn = document.querySelector("button");
+let input = document.querySelector("input");
+let color = input.value;
 let size = 25;
 container.style.width = `${size}rem`;
+
+input.addEventListener("input", (e) => {
+  color = e.target.value;
+});
 
 function createGrids() {
   for (let i = 0; i < size * size; i++) {
@@ -24,9 +30,9 @@ function fillBoxOnMousedown() {
 
   let div = document.querySelectorAll(".box");
   div.forEach((box) => {
-    box.addEventListener("mouseenter", (e) => {
+    box.addEventListener("mouseenter", () => {
       if (isMouseDown) {
-        box.classList.add("fill");
+        box.style.backgroundColor = color;
       }
     });
   });
@@ -35,7 +41,7 @@ function fillBoxOnMousedown() {
 btn.addEventListener("click", () => {
   let div = document.querySelectorAll(".box");
   div.forEach((box) => {
-    box.classList.remove("fill");
+    box.style.removeProperty("background-color");
   });
 });
 
