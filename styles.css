@@ -33,9 +33,5 @@ main {
 .box {
   height: 1rem;
   width: 1rem;
-  outline: 1px solid rgb(190, 190, 190);
-}
-
-.fill {
-  background-color: black;
+  outline: 1px solid rgb(224, 224, 224);
 }
